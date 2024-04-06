@@ -6,7 +6,7 @@ import MainContext from '../MainContext';
 
 const Content = () => {
 
-    const { brands } = useContext(MainContext)
+    const { brands, selectedBrands } = useContext(MainContext)
 
     return (
         <main className='content'>
