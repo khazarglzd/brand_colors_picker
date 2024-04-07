@@ -19,8 +19,8 @@ function Brand({ brand }) {
     }
 
     return (
-        <div className={`brand ${selectedBrands.includes(brand.slug) ? 'selected' : ''}`}>
-            <h5 onClick={toggleSelected}>{brand.title}</h5>
+        <div onClick={toggleSelected} className={`brand ${selectedBrands.includes(brand.slug) ? 'selected' : ''}`}>
+            <h5>{brand.title}</h5>
             <div className="brand-colors">
                 {brand.colors.map((color, key) => (
                     <ClipboardButton key={key} data-clipboard-text={color} onSuccess={() => setColor(color)}
