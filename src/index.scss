@@ -191,49 +191,86 @@ body {
         }
       }
     }
-  }
-}
 
-.brands {
-  height: calc(100% - 60px);
-  width: 100%;
-  .brand {
-    border: 1px solid #ddd;
-    background: #fff;
-    padding: 15px;
-    margin: 10px 15px;
-
-    h5 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-
-    &-colors {
+    .download {
+      padding-right: 25px;
       display: flex;
+      align-items: center;
 
-      span {
-        cursor: pointer;
-        background: var(--bgColor);
-        height: 40px;
+      .actions {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--textColor);
-        text-indent: -9999px;
-        width: 70px;
+        margin-right: 15px;
+
+        a,
+        button {
+          height: 30px;
+          width: 30px;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          svg {
+            height: 15px;
+            width: 15px;
+          }
+        }
+        select {
+          margin-right: 7px;
+          height: 30px;
+          padding: 0 15px;
+          background: #eee;
+          border-radius: 4px;
+          appearance: none;
+          text-align: center;
+          cursor: pointer;
+        }
       }
     }
+  }
 
-    &.selected {
-      border-color: blue;
+  .brands {
+    height: calc(100% - 60px);
+    width: 100%;
+    .brand {
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 15px;
+      margin: 10px 15px;
 
-      .brand-colors {
+      h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      &-colors {
+        display: flex;
+
         span {
-          flex: 1;
-          text-indent: 0;
+          cursor: pointer;
+          background: var(--bgColor);
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--textColor);
+          text-indent: -9999px;
+          width: 70px;
+        }
+      }
+
+      &.selected {
+        border-color: blue;
+
+        .brand-colors {
+          span {
+            flex: 1;
+            text-indent: 0;
+          }
         }
       }
     }
