@@ -8,6 +8,10 @@ function Download() {
     const [downloadUrl, setDownloadUrl] = useState()
     const [cssMethod, setCssMethod] = useState('css')
 
+    const getLink = () => {
+        prompt("Here is your link to share:", `http//localhost:3000/collection${selectedBrands.join(",")}`)
+    }
+
     useEffect(() => {
         if (selectedBrands.length > 0) {
 
@@ -66,7 +70,7 @@ function Download() {
                 <a download={`brands.${cssMethod}`} href={downloadUrl}>
                     <GrDownload />
                 </a>
-                <button>
+                <button onClick={getLink}>
                     <GrLink />
                 </button>
             </div>
